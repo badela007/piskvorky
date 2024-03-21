@@ -1,6 +1,9 @@
-* {
+*,
+:after,
+:before {
   box-sizing: border-box;
 }
+
 
 body {
   background-image: linear-gradient(#615dad, #ffc8da);
@@ -27,6 +30,8 @@ body {
 
 .card__title {
   font-family: "Lobster", sans-serif;
+  text-align: center;
+  font-size: 3rem;
 }
 
 .card__info {
@@ -37,6 +42,8 @@ body {
 .card__title,
 .card__info {
   background-color: #283e50;
+  width: 100%;
+  margin: 0;
 }
 
 .card__footer {
@@ -44,12 +51,14 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
+
 }
 
 .card__rules {
   background-color: #1fcca4;
   text-decoration: none;
   color: #ffffff;
+
 }
 
 .card__rules:hover {
@@ -60,6 +69,7 @@ body {
   background-color: #0197f6;
   text-decoration: none;
   color: #ffffff;
+
 }
 
 .card__play:hover {
