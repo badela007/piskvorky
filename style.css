@@ -75,7 +75,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-top: 1px solid #615dad;
+  border-top: 1px solid #283e50;
 }
 
 .card__play:hover {
@@ -93,12 +93,14 @@ a {
 .play {
   max-width: 80vmin;
   margin: 0 auto;
+  height: 100vh;
 }
 
 .play__title {
   font-family: "Lobster", sans-serif;
   text-align: center;
   font-size: 3.5rem;
+  margin: 10px 0 5px 0;
 }
 
 .nav {
@@ -133,4 +135,22 @@ a {
 
 .restart_symbol:hover {
   background-color: #0090e9;
+}
+
+.conteiner__button {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1.5px solid #283e50;
+}
+
+.play__button {
+  width: 10%;
+  aspect-ratio: 1 / 1;
+  opacity: 0.7;
+}
+
+.play__button:hover,
+.play__button:focus {
+  cursor: pointer;
+  opacity: 0.3;
 }
