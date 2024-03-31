@@ -87,3 +87,50 @@ a {
   font-size: 20px;
   color: #ffffff;
 }
+
+/* styly pro hra.html*/
+
+.play {
+  max-width: 80vmin;
+  margin: 0 auto;
+}
+
+.play__title {
+  font-family: "Lobster", sans-serif;
+  text-align: center;
+  font-size: 3.5rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__player {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-family: 'Times New Roman', Times, sans-serif;
+  font-weight: bold;
+}
+
+.home_symbol {
+  background-color: #1fcca4;
+  width: 2.5rem;
+  padding: 0.4rem;
+
+}
+
+.restart_symbol {
+  background-color: #0197f6;
+  width: 2.5rem;
+  padding: 0.4rem;
+}
+
+.home_symbol:hover {
+  background-color: #1cbb96;
+}
+
+.restart_symbol:hover {
+  background-color: #0090e9;
+}
