@@ -120,13 +120,14 @@ a {
   background-color: #1fcca4;
   width: 2.5rem;
   padding: 0.4rem;
-
+  border-radius: 5px 5px 5px 5px;
 }
 
 .restart_symbol {
   background-color: #0197f6;
   width: 2.5rem;
   padding: 0.4rem;
+  border-radius: 5px 5px 5px 5px;
 }
 
 .home_symbol:hover {
