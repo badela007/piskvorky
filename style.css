@@ -175,3 +175,19 @@ a {
   background-position: center;
   background-size: 80%;
 }
+
+@keyframes zvetseni {
+  from {
+    background-size: 0
+  }
+
+  to {
+    background-size: 80%
+  }
+}
+
+.play__field--circle,
+.play__field--cross {
+  animation-name: zvetseni;
+  animation-duration: 0.45s;
+}
