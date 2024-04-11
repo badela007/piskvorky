@@ -48,5 +48,7 @@ document
   .querySelector('.nav__game--restart')
   .addEventListener('click', function (evt) {
     const result = confirm('Opravdu chcete restartovat hru?');
-    if (!result) evt.preventDefault;
+    if (!result) {
+      evt.preventDefault();
+    }
   });
