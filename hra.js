@@ -1,4 +1,5 @@
 let currentPlayer = 'circle';
+const buttons = document.querySelectorAll('button');
 
 const chooseButton = (event) => {
   event.target.disabled = true;
@@ -13,36 +14,9 @@ const chooseButton = (event) => {
   }
 };
 
-document
-  .querySelector('button:nth-child(1)')
-  .addEventListener('click', chooseButton);
-document
-  .querySelector('button:nth-child(2)')
-  .addEventListener('click', chooseButton);
-document
-  .querySelector('button:nth-child(3)')
-  .addEventListener('click', chooseButton);
-document
-  .querySelector('button:nth-child(4)')
-  .addEventListener('click', chooseButton);
-document
-  .querySelector('button:nth-child(5)')
-  .addEventListener('click', chooseButton);
-document
-  .querySelector('button:nth-child(6)')
-  .addEventListener('click', chooseButton);
-document
-  .querySelector('button:nth-child(7)')
-  .addEventListener('click', chooseButton);
-document
-  .querySelector('button:nth-child(8)')
-  .addEventListener('click', chooseButton);
-document
-  .querySelector('button:nth-child(9)')
-  .addEventListener('click', chooseButton);
-document
-  .querySelector('button:nth-child(10)')
-  .addEventListener('click', chooseButton);
+buttons.forEach((button) => {
+  button.addEventListener('click', chooseButton);
+});
 
 document
   .querySelector('.nav__game--restart')
