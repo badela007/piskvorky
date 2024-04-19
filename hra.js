@@ -1,5 +1,5 @@
+import { findWinner } from 'https://unpkg.com/piskvorky@0.1.4';
 let currentPlayer = 'circle';
-const buttons = document.querySelectorAll('button');
 
 const chooseButton = (event) => {
   event.target.disabled = true;
@@ -12,9 +12,45 @@ const chooseButton = (event) => {
     currentPlayer = 'circle';
     document.getElementById('currentPlayer').src = 'obrazky/circle.svg';
   }
+
+  //Výběr políček + posluchač
+  const playButtons = document.querySelectorAll('.play__button');
+  playButtons.forEach((button) => {
+    button.addEventListener('click', chooseButton);
+  });
+  const gameField = Array.from(playButtons);
+
+  const gameFieldSymbols = gameField.map((clickedSymbols) => {
+    if (clickedSymbols.classList.contains('play__field--circle')) {
+      return 'o';
+    } else if (clickedSymbols.classList.contains('play__field--cross')) {
+      return 'x';
+    } else {
+      return '_';
+    }
+  });
+
+  console.log(gameFieldSymbols);
+
+  //Hledání vítěze
+  const winner = findWinner(gameFieldSymbols);
+
+  if (winner === 'o' || winner === 'x') {
+    setTimeout(() => {
+      alert(`Hurá, vyhrál hráč se symbolem ${winner}.`);
+      location.reload();
+    }, 250);
+  } else if (winner === 'tie') {
+    setTimeout(() => {
+      alert(`Neraduj se, hra skončila nerozhodně`);
+      location.reload();
+    }, 250);
+  }
 };
 
-buttons.forEach((button) => {
+//Výběr políček + posluchač
+const playButtons = document.querySelectorAll('.play__button');
+playButtons.forEach((button) => {
   button.addEventListener('click', chooseButton);
 });
 
